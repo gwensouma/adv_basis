@@ -1,0 +1,128 @@
+[
+  {
+    "question": "What are the main building blocks of Flutter UIs?",
+    "answers": [
+      {
+        "answer": "Widgets",
+        "correct": true
+      },
+      {
+        "answer": "Components",
+        "correct": false
+      },
+      {
+        "answer": "Blocks",
+        "correct": false
+      },
+      {
+        "answer": "Functions",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "How are Flutter UIs built?",
+    "answers": [
+      {
+        "answer": "By combining widgets in code",
+        "correct": true
+      },
+      {
+        "answer": "By combining widgets in a visual editor",
+        "correct": false
+      },
+      {
+        "answer": "By defining widgets in config files",
+        "correct": false
+      },
+      {
+        "answer": "By using XCode for iOS and Android Studio for Android",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "What's the purpose of a StatefulWidget?",
+    "answers": [
+      {
+        "answer": "Update UI as data changes",
+        "correct": true
+      },
+      {
+        "answer": "Update data as UI changes",
+        "correct": false
+      },
+      {
+        "answer": "Ignore data changes",
+        "correct": false
+      },
+      {
+        "answer": "Render UI that does not depend on data",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Which widget should you try to use more often: StatelessWidget or StatefulWidget?",
+    "answers": [
+      {
+        "answer": "StatelessWidget",
+        "correct": true
+      },
+      {
+        "answer": "StatefulWidget",
+        "correct": false
+      },
+      {
+        "answer": "Both are equally good",
+        "correct": false
+      },
+      {
+        "answer": "None of the above",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "What happens if you change data in a StatelessWidget?",
+    "answers": [
+      {
+        "answer": "The UI is not updated",
+        "correct": true
+      },
+      {
+        "answer": "The UI is updated",
+        "correct": false
+      },
+      {
+        "answer": "The closest StatefulWidget is updated",
+        "correct": false
+      },
+      {
+        "answer": "Any nested StatefulWidgets are updated",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "How should you update data inside of StatefulWidgets?",
+    "answers": [
+      {
+        "answer": "By calling setState()",
+        "correct": true
+      },
+      {
+        "answer": "By calling updateData()",
+        "correct": false
+      },
+      {
+        "answer": "By calling updateUI()",
+        "correct": false
+      },
+      {
+        "answer": "By calling updateState()",
+        "correct": false
+      }
+    ]
+  }
+]
