@@ -28,6 +28,8 @@ class QuizQuestion {
   Map<String, dynamic> toJson() => _$QuizQuestionToJson(this);
 
   List<String> getShuffledAnswer() {
-    return answers.map((e) => e.answer).toList()..shuffle();
+    final shuffledList = List.of(answers.map((e) => e.answer).toList());
+    shuffledList.shuffle();
+    return shuffledList;
   }
 }

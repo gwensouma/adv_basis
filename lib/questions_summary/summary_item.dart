@@ -11,8 +11,9 @@ class SummmaryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isCorrectQuestion =
-        summaryData['user_answer'] == summaryData['correct_answer'];
+    List<String> correct = summaryData['correct_answer'] as List<String>;
+
+    final isCorrectQuestion = summaryData['is_correct'] as bool;
 
     return Padding(
       padding: const EdgeInsets.all(6.0),
@@ -45,13 +46,15 @@ class SummmaryItem extends StatelessWidget {
                     color: const Color.fromARGB(255, 229, 179, 238),
                   ),
                 ),
-                Text(
-                  summaryData['correct_answer'] as String,
-                  style: GoogleFonts.lato(
-                    fontSize: 14.0,
-                    color: const Color.fromARGB(255, 184, 188, 248),
-                  ),
-                ),
+                ...correct.map((e) {
+                  return Text(
+                    e,
+                    style: GoogleFonts.lato(
+                      fontSize: 14.0,
+                      color: const Color.fromARGB(255, 184, 188, 248),
+                    ),
+                  );
+                }),
               ],
             ),
           ),

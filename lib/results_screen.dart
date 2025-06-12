@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:adv_basis/models/quiz_question.dart';
 import 'package:adv_basis/questions_summary/questions_summary.dart';
 import 'package:flutter/material.dart';
@@ -19,15 +21,25 @@ class ResultsScreen extends StatelessWidget {
     final List<Map<String, Object>> summary = [];
 
     for (int i = 0; i < choosenAnswer.length; i++) {
-      final correctAnswer = list[i].answers
-          .firstWhere((answer) => answer.correct)
-          .answer;
+      // final correctAnswer = list[i].answers.where((answer) => answer.correct);
+
+      List<String> correctAnswers = list[i].answers
+          .where((answer) => answer.correct)
+          .map((e) => e.answer)
+          .toList();
+
+      final isCorrect = correctAnswers
+          .where((e) => e == choosenAnswer[i])
+          .isNotEmpty;
+
+      print(isCorrect);
 
       summary.add({
         'question_index': i,
         'question': list[i].question,
-        'correct_answer': correctAnswer,
+        'correct_answer': correctAnswers,
         'user_answer': choosenAnswer[i],
+        'is_correct': isCorrect,
       });
     }
 
